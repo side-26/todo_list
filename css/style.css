@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #f0f1f3;
+    --primary-color: #1465ef;
+    --trash-color: #fb6d85;
+    --text-color: #191919;
+    --white-color:#fff;
+    --border-color:#ccc;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  ul{
+      list-style-type: none;
+  }
+  body{
+      background-color: var(--bg-color);
+  }
+  .h2{
+      color: var(--primary-color);
+      font-size: 3rem;
+      text-decoration: underline;
+      text-transform: capitalize;
+  }
+  .h2>span{
+      margin-right: 1rem;
+  }
+  .input_container{
+      background-color: var(--white-color);
+      border-radius: 5px;
+  }
+  #userInput{
+      border: none;
+    position: relative;
+  }
+  .input_container::after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: .1rem;
+      background-color:var(--border-color) ;
+      bottom: -40%;
+  }
+  #userInput:focus{
+      outline: none;
+  }
+  #edit,#enter{
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      font-weight: 500!important;
+      width: 80%;
+      border: none;
+      border-radius: 3px;
+  }
+ 
+  
+  li{
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem .5rem;
+      align-items: center;
+      /* z-index: 100; */
+  }
+  p{
+      width: 50%;
+      transition: all .35s ease-in-out;
+      margin: 0;
+  }
+  li:hover p{
+      background-color: var(--white-color);
+  }
+  li  button {
+    font-weight: normal;
+    background: none;
+    border: none;
+    float: right;
+    color: #025f70;
+    font-weight: 800;
+    /* z-index: 200; */
+  }
+  li  button:first-child{
+    color: var(--trash-color);
+  }
+  .done {
+    text-decoration-line: line-through;
+  }
+  .delete {
+    display: none;
+  }
+  .shake {
+    animation: shake 0.5s;
+    animation-iteration-count: 1s;
+  }
+  .footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }

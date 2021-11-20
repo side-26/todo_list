@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <section class="header_con py-5">
+        <div class="container">
+            <div class="row">
+              <header class="header w-100 d-flex justify-content-center">
+                <h2 class="h2">
+                  <span><i class="fas fa-check-square"></i></span>my todo-s
+                </h2>
+              </header>
+            </div>
+    </section>
+
+     <section class="container my-5 ">
+        <div class="row justify-content-center">
+            <div class="input_container py-4 justify-content-around col-11 d-flex">
+              <div class="col-lg-8">
+                <input
+                class="w-100 py-2"
+                  id="userInput"
+                  autocomplete="true"
+                  type="text"
+                  placeholder=" Enter new activity..."
+                  maxlength="40"
+                />
+              </div>
+              <button class="col-lg-1 py-2" id="enter">Add</button>
+              <button class="col-lg-2 delete" id="edit"  >
+                <span><i class="bi bi-pencil-square"></i></span>
+              </button>
+            </div>
+          </div>
+     </section>
+
+      <!-- Empty List -->
+      <section class="sect-ul py-4">
+          <div class="container">
+              <div class="row">
+                  <ul id="container" class="w-100">
+                      
+                  </ul>
+              </div>
+          </div>
+      </section>
+    <footer class="footer">Powered By <strong>  Side26</strong>;</footer>
+    <script src="./js/ToDoList.js"></script>
+  </body>
+</html>
